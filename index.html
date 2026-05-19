@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OGEDAY PRO</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #4f7cff;
+      --secondary: #6e6cff;
+      --dark: #101522;
+      --text: #1d2433;
+      --soft: #6f7a91;
+      --white: #ffffff;
+      --border: rgba(79, 124, 255, 0.12);
+      --shadow: 0 20px 60px rgba(37, 53, 99, 0.12);
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(110,108,255,.10), transparent 25%),
+        radial-gradient(circle at top left, rgba(79,124,255,.08), transparent 30%),
+        #f7f9fc;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: var(--text);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .card {
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 600px;
+      position: relative;
+    }
+
+    .left {
+      flex: 1;
+      padding: 70px;
+      z-index: 2;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(79,124,255,.08);
+      color: var(--primary);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 54px;
+      line-height: 1.08;
+      margin-bottom: 20px;
+      color: var(--dark);
+      font-weight: 800;
+      max-width: 620px;
+    }
+
+    p {
+      color: var(--soft);
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 520px;
+      margin-bottom: 40px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 22px 34px;
+      border-radius: 18px;
+      background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+      );
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      transition: .25s ease;
+      box-shadow: 0 15px 35px rgba(79,124,255,.25);
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px rgba(79,124,255,.35);
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      height: 100%;
+      min-height: 600px;
+      padding: 40px;
+    }
+
+    .logo-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle,
+        rgba(79,124,255,.18),
+        rgba(110,108,255,.10),
+        transparent 70%);
+      filter: blur(20px);
+    }
+
+    .logo {
+      position: relative;
+      z-index: 2;
+      max-width: 100%;
+      width: 480px;
+      object-fit: contain;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .card {
+        flex-direction: column;
+        min-height: auto;
+        border-radius: 28px;
+      }
+
+      .right {
+        order: -1;
+        min-height: auto;
+        padding: 35px 25px 10px;
+      }
+
+      .logo {
+        width: 270px;
+      }
+
+      .logo-glow {
+        width: 280px;
+        height: 280px;
+      }
+
+      .left {
+        padding: 10px 25px 40px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      p {
+        font-size: 16px;
+        max-width: 100%;
+      }
+
+      .button {
+        width: 100%;
+        padding: 20px;
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="card">
+
+      <div class="left">
+        <div class="badge">
+          ✓ Güvenli Yönlendirme
+        </div>
+
+        <h1>
+          SİTELERE GİTMEK İÇİN
+        </h1>
+
+        <p>
+          Devam etmek için aşağıdaki bağlantıya tıklayabilirsiniz.
+        </p>
+
+        <a
+          href="https://ogedays.net"
+          class="button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          SİTELERE GİTMEK İÇİN BURAYA TIKLA
+        </a>
+      </div>
+
+      <div class="right">
+        <div class="logo-wrap">
+          <div class="logo-glow"></div>
+
+          <!-- Logo -->
+          <img
+            src="logo.webp"
+            alt="OGEDAY PRO"
+            class="logo"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
